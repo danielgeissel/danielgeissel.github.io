@@ -228,10 +228,11 @@
     }
 
     .project-thumb {
-      height: 160px;
+      height: 90px;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-left: 1.25rem;
       font-size: 2.5rem;
     }
 
@@ -240,7 +241,7 @@
     .project-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
 
     .project-tag {
-      font-size: 0.7rem;
+      font-size: 0.55rem;
       padding: 0.2rem 0.6rem;
       border-radius: 2rem;
       font-weight: 500;
@@ -253,7 +254,8 @@
     .tag-amber  { background: #faeeda; color: #854f0b; }
     .tag-pink   { background: #fbeaf0; color: #993556; }
 
-    .project-body h4 {
+    .project-body h4,
+    .project-thumb h4 {
       font-family: var(--serif);
       font-size: 1.15rem;
       margin-bottom: 0.4rem;
@@ -395,8 +397,8 @@
 <nav>
   <span class="nav-logo">Daniel Geissel, PhD</span>
   <div class="nav-links">
-    
-
+    <button class="nav-link active" onclick="showPage('about', this)">About</button>
+    <button class="nav-link" onclick="showPage('portfolio', this)">Portfolio</button>
   </div>
 </nav>
 
@@ -405,12 +407,11 @@
   <div class="about-hero">
     <div class="hero-text">
       <h1>Data scientist <br>&amp; <em>Economist</em><br></h1>
-      <p>Showcasing projects at the intersection of econometrics, machine learning, and spatial analysis. <i class="ti ti-arrow-right" aria-hidden="true"></i>Coming soon.</p>
+      <p>Showcasing projects at the intersection of econometrics, machine learning, and spatial analysis.</p>
     </div>
-<div class="avatar-frame" style="padding:0; overflow:hidden;">
-  <img src="img/main.png" alt=""
-       style="width:90%; height:90%">
-</div>
+    <div class="avatar-frame" style="padding:0; overflow:hidden;">
+      <img src="img/main.png" alt="" style="width:90%; height:90%">
+    </div>
   </div>
 
   <div class="about-details">
@@ -422,18 +423,72 @@
       <div class="skills-list">
         <span class="skill-tag">R</span>
         <span class="skill-tag">Stata</span>
-        <span class="skill-tag">QGIS</span>
         <span class="skill-tag">Python</span>
-        <span class="skill-tag">Open Data Kit (ODK)</span>
         <span class="skill-tag">SQL</span>
+        <div style="flex-basis: 100%; height: 0;"></div> 
+        <span class="skill-tag">QGIS</span>
+        <span class="skill-tag">ODK</span>
         <span class="skill-tag">LaTeX</span>
+      </div>
+      <div class="skills-list" style="margin-top: 2rem">
+        <span class="skill-tag">scikit-learn</span>
+        <span class="skill-tag">PyTorch</span>
+      </div>
+    </div>
+    <a href="mailto:d.geissel@posteo.eu" class="btn-primary"
+       style="align-self:flex-start; display:inline-flex; align-items:center; gap:0.4rem; text-decoration:none; width:fit-content">
+      <i class="ti ti-mail" aria-hidden="true"></i> Contact
+    </a>
+  </div>
+</div>
+
+<!-- ── Portfolio ── -->
+<div id="portfolio" class="page">
+  <div class="portfolio-header">
+    <h2>Selected work</h2>
+    <p>More projects coming soon.</p>
+  </div>
+  <div class="project-grid">
+    <div class="project-card">
+      <div class="project-thumb" style="background:#e8f0ec;">
+        <h4>African land conflict analysis</h4>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag tag-pink">R</span>
+          <span class="project-tag tag-green">Impact evaluation</span>
+          <span class="project-tag tag-blue">Geospatial panel</span>
+          <span class="project-tag tag-amber">Development</span>
+        </div>
+        <p>Built a novel dataset and applied causal inference methods (spatial quasi-experimental design and staggered Difference-in-Differences) to show that large-scale land acquisitions in sub-Saharan Africa significantly increase localized conflict.</p>
+        <a href="https://doi.org/10.7910/DVN/WGEUSM" class="project-link">Dataverse replication data <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-thumb" style="background:#faeeda;">
+        <h4>Liberian welfare analysis</h4>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag tag-pink">Stata</span>
+          <span class="project-tag tag-green">Impact evaluation</span>
+          <span class="project-tag tag-blue">Survey</span>
+          <span class="project-tag tag-amber">Development</span>
+        </div>
+        <p>Used own household survey data from ~2000 households in Liberia to evaluate the welfare effects of large-scale oil palm plantations, showing that plantation exposure is associated with only limited improvements in rural livelihoods despite higher wage income.</p>
+        <a href="https://doi.org/10.7910/DVN/USXTCM" class="project-link">Dataverse replication data <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
 </div>
 
-
+<script>
+  function showPage(pageId, btn) {
+    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    btn.classList.add('active');
+  }
 </script>
-
 </body>
 </html>
