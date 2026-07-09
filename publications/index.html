@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Geissel, PhD — Conferences &amp; Publications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --serif: 'DM Serif Display', serif;
+      --sans: 'DM Sans', sans-serif;
+      --bg: #f9f7f4;
+      --surface: #ffffff;
+      --text: #1a1917;
+      --muted: #6b6860;
+      --accent: #2e5c4a;
+      --accent-light: #e8f0ec;
+      --border: rgba(0,0,0,0.1);
+      --tag-bg: #f0ede8;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── Nav ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      background: var(--bg);
+      border-bottom: 0.5px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links { display: flex; gap: 0.25rem; }
+
+    .nav-link {
+      background: none;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--muted);
+      padding: 0.4rem 0.9rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      display: inline-flex;
+    }
+    .nav-link:hover { color: var(--text); background: rgba(0,0,0,0.05); }
+    .nav-link.active { color: var(--accent); background: var(--accent-light); font-weight: 500; }
+
+    .page { animation: fadeUp 0.4s ease; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Header ── */
+    .portfolio-header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 2.5rem;
+    }
+
+    .portfolio-header h2 {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .portfolio-header p { color: var(--muted); font-size: 0.95rem; font-weight: 300; }
+
+    /* ── Lists ── */
+    .pub-details {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2.5rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .detail-block h3 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .pub-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .pub-list li {
+      position: relative;
+      padding-left: 1.1rem;
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .pub-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .pub-list li strong { color: var(--text); font-weight: 500; }
+    .pub-list li span.pub-meta { display: block; font-size: 0.8rem; color: var(--muted); }
+
+    .pub-list li a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .pub-list li a:hover { opacity: 0.7; }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .pub-details { padding: 0 1.25rem 3rem; }
+      .portfolio-header { padding: 3rem 1.25rem 1.5rem; }
+      nav { padding: 1rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">Daniel Geissel, PhD</span>
+</nav>
+
+<div class="page">
+  <div class="portfolio-header">
+    <h2>Conferences &amp; Publications</h2>
+    <p>Peer-reviewed work, working papers, and selected talks.</p>
+  </div>
+
+  <div class="pub-details">
+    <div class="detail-block">
+      <h3>Publications and Manuscripts</h3>
+      <ul class="pub-list">
+        <li>
+          <strong>Cultivating conflict: How large-scale land deals drive violence in
+		sub-Saharan Africa</strong>
+          <span class="pub-meta">Geissel, D.; Lay, J. — Submitted to Political Geography, 2026</span>
+        </li>
+        <li>
+          <strong>More cash, limited gain: Welfare effects of oil palm plantations in Liberia.</strong>
+          <span class="pub-meta">Geissel, D.; Lay, J.; Lohmann, R.  — World Development (R&R). Earlier version accepted for the 2020 World Bank Conference on Land and Poverty, 2026</span>
+        </li>
+        <li>
+          <strong>Elysian Elaeis? Welfare Impacts of Large-scale Oil Palm Plantations in West Kalimantan, Indonesia. </strong>
+          <span class="pub-meta">Geissel, D.; Lay, J.  — Working Paper, 2024</span>
+        </li>
+        <li>
+          <strong>The impact of spiritual-cultural displacement on mental health: Evidence from indigenous populations.</strong>
+          <span class="pub-meta">Geissel, D.; Lay, J.; Priebe, J.  — Working Paper, accepted for the 		2026 World Bank Land and Property Conference, 2024</span>
+        </li>
+        <li>
+          <strong>Large-Scale	Land Deals and Social Conflict: Evidence and Policy Implications</strong>
+          <span class="pub-meta">De Juan, A.; Geissel, D.; Lay, J.; Lohmann, R.  — GIGA Working Paper 328, 2022</span>
+          <a href="https://pure.giga-hamburg.de/ws/files/29230513/WP_328.pdf">[Link to paper]</a>
+        </li>
+        <li>
+          <strong>Who Benefits from Tree Planting in the Global South? The case of two carbon offset projects in Laos</strong>
+          <span class="pub-meta">Geissel, D.; Keovichith, C.; Rivera, N.; Pedra, D.; Kubitza, C. — Land Matrix 		Deal Narrative #1, 2024</span>
+          <a href="https://landmatrix.org/documents/174/Land_Matrix_DN1_Offsetting_Carbon_digital_v3.pdf">[Link to paper]</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="detail-block">
+      <h3>Conferences &amp; talks</h3>
+      <ul class="pub-list">
+        <li>
+          <strong>Trade-offs between Climate Mitigation and Local Development: Case Studies of Carbon Offset Projects in Laos</strong>
+          <span class="pub-meta">LANDac International Conference, Utrecht, Netherlands, 2023</span>
+        </li>
+        <li>
+          <strong>Land Grabs and their Effects on the Well-being of Indigenous Communities</strong>
+          <span class="pub-meta">Leibniz Environment and Development Symposium, Hamburg, Germany, 2022</span>
+        </li>
+        <li>
+          <strong>Land Grabbing and its Consequences for Traditional Institutions and Collective Action</strong>
+          <span class="pub-meta">Doctoral Workshop of the Standing Field Committee for Development Economics (German Economic Association), Berlin, Germany, 2022</span>
+        </li>
+        <li>
+          <strong>Heterogeneous Effects of Large-Scale Land Acquisitions on Conflict in Sub Saharan Africa</strong>
+          <span class="pub-meta">MIASA policy conference: Policies for a sustainable rural transformation in Africa, Accra, Ghana, 2022</span>
+        </li>
+        <li>
+          <strong>Heterogeneous Effects of Land Acquisitions on Conflict in Africa</strong>
+          <span class="pub-meta">Conference on Land Policy in Africa (CLPA), Abidjan, Côte d'Ivoire, 2019</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
